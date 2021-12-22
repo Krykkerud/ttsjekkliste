@@ -13,8 +13,8 @@ body, div, form, input, textarea, p {
 }
 
 hr {
-  border-top: 5px dotted #F1F1F1;
-  border-bottom: none;
+  border: none;
+  border-top: dotted #F1F1F1 5px;
   width: 90%;
   margin: 25px auto;
 }
@@ -22,6 +22,7 @@ hr {
 p {
   padding: 10px 0;
 }
+
 h1 {
   position: absolute;
   margin: 0;
@@ -62,6 +63,7 @@ form {
   width: 100%;
   height: 100%;
 }
+
 .ku-image {
   position: relative;
   height: 210px;
@@ -73,10 +75,10 @@ form {
 }
 
 .kontakt {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    padding-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding-top: 25px;
 }
 
 input, textarea {
@@ -118,7 +120,15 @@ input[type=email] {
 }
 
 .dyreslagNummer {
-  margin-right: 3rem ;
+  margin-right: 3rem;
+  width: 8%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+#antall {
+  margin-right: 3rem;
   width: 8%;
   margin: 8px 0;
   box-sizing: border-box;
@@ -163,14 +173,14 @@ button {
   cursor: pointer;
 }
 
-.dyreslag {
-}
+.dyreslag {}
 
-.valgDyreslag{
+.valgDyreslag {
   margin-right: 10px;
 }
 
 .add_form_field {
+  text-align: center;
   width: 70px;
   padding: 5px;
   border: none;
@@ -181,9 +191,9 @@ button {
   cursor: pointer;
 }
 
-.delete{
+.delete {
+  text-align: center;
   width: 40px;
-  padding: 5px;
   border: none;
   border-radius: 5px;
   background: #cc0052;
@@ -203,6 +213,9 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+.delete, .add_form_field {
+}
 
   .contact-item .item {
     width: calc(50% - 8px);

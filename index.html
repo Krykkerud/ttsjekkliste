@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- Bootstrap and jQuery: -->
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -52,8 +52,8 @@
 
           <div class="dyreslag">
             <p>Hvilket dyreslag er på gården, og hva er antallet?</p>
-            <button class="add_form_field">Legg til &nbsp;
-              <span style="font-size:16px; font-weight:bold;">+ </span>
+            <button class="btn-sm add_form_field">Legg til &nbsp;
+              <span style="list-style-type: none; font-size:16px; font-weight:bold;">+ </span>
             </button>
             <div>
               <!-- (\/) (°,,,,°) (\/)
@@ -78,7 +78,7 @@
                     if (x < max_fields) {
                       x++;
                       $(wrapper).append(
-                        '<div><select class="valgDyreslag custom-select custom-select-lg mb-3"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><a href="#" class="delete"><button class="delete">Fjern</button></a></div>'
+                        '<div><select class="valgDyreslag custom-select custom-select-lg mb-3"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><button class="btn-xs delete">Fjern</button></div>'
                       ); //add input box
                     } else {
                       alert('You Reached the limits')
@@ -151,6 +151,7 @@
         </div>
 
       </div>
+      <h4></h4>
     </form>
   </div>
   <!-- jQuery library -->
