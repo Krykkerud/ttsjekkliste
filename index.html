@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap and jQuery: -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container1">
+    <form action="/">
+      <div class="banner">
+        <h1>Test</h1>
+        <img class="ku-image" src="images/ku.jpg" alt="En ku">
+      </div>
+      <h3> Fyll ut sjekklisten under for å få et tilbud som er tilpasset deg:</h3>
+      <div class="kontakt">
+        <div class="kontakt-person">
+          <p>Fornavn</p>
+          <input type="text" name="name" id="name" placeholder="Fornavn*" required>
+          <p>Etternavn</p>
+          <input type="text" name="name" id="name" placeholder="Etternavn*" required>
+          <p>Telefonnummer</p>
+          <input type="tel" id="phone" name="phone" placeholder="Telefonnummer*" required>
+          <p>Epost</p>
+          <input type="email" id="email " name="email" placeholder="Epost*" required />
+        </div>
+
+        <div class="kontakt-firma">
+          <p>Firmanavn</p>
+          <input type="text" name="name" id="name" placeholder="Firmanavn*" required>
+          <p>Adresse</p>
+          <input type="text" name="name" id="name" placeholder="Adresse*" required>
+          <p>Gårds/Bruksnummer</p>
+          <input type="text" id="name" name="name" placeholder="Gårds/Bruksnummer*" required>
+          <p>Organisasjonsnummer</p>
+          <input type="text" id="text " name="text" placeholder="Organisasjonsnummer" />
+        </div>
+      </div>
+      <hr>
+      <div class="gaard1">
+        <div class="info1">
+
+          <div class="dyreslag">
+            <p>Hvilket dyreslag er på gården, og hva er antallet?</p>
+            <button class="add_form_field">Legg til &nbsp;
+              <span style="font-size:16px; font-weight:bold;">+ </span>
+            </button>
+            <div>
+              <!-- (\/) (°,,,,°) (\/)
+             woop woop woop-->
+              <select class="valgDyreslag custom-select custom-select-lg mb-3">
+                <option selected>Velg dyreslag</option>
+                <option value="1">Storfe</option>
+                <option value="2">Maur</option>
+                <option value="3">Høns</option>
+              </select>
+
+              <input class="dyreslagNummer" type="number" id="antall" name="antall" min="1" required>
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  var max_fields = 10;
+                  var wrapper = $(".dyreslag");
+                  var add_button = $(".add_form_field");
+
+                  var x = 1;
+                  $(add_button).click(function(e) {
+                    e.preventDefault();
+                    if (x < max_fields) {
+                      x++;
+                      $(wrapper).append(
+                        '<div><select class="valgDyreslag custom-select custom-select-lg mb-3"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><a href="#" class="delete"><button class="delete">Fjern</button></a></div>'
+                      ); //add input box
+                    } else {
+                      alert('You Reached the limits')
+                    }
+                  });
+
+                  $(wrapper).on("click", ".delete", function(e) {
+                    e.preventDefault();
+                    $(this).parent('div').remove();
+                    x--;
+                  })
+                });
+              </script>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>Hvordan hånteres gjødslen på gården idag?</p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="item">
+            <p>Finnes det andre store kilder til biologisk matriale på gården?</p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="item">
+            <p>Hvor mange kilo husdyrsmøkk og/eller annet organisk materiale kommer fra gården?</p>
+            <input type="text" id="name" name="name" required>
+          </div>
+        </div>
+        <div class="info2">
+
+          <div class="item">
+            <p>Hvor stort er gjødselbehovet på gården? (type,kg)</p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="item">
+            <p>Hvor mange traktrotimer brukes årlig på gjødselhåntering?</p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="item">
+            <p>Vil det forekomme perioder uten tilgang på husdyrmøkk?</p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="item">
+            <p>Hvordan lagres gjødslen idag?</p>
+            <textarea rows="3" required></textarea>
+          </div>
+
+        </div>
+
+      </div>
+      <hr>
+
+      <div class="gaard2">
+
+        <div class="item">
+          <p>Hvor stort er gårdens årlige strømforbruk i kWh?</p>
+          <input class="strom" type="number" id="antall" name="antall" min="1" required>
+        </div>
+        <div class="item">
+          <p>Hvilken oppvarmingsmetode brukes på gården?</p>
+          <textarea rows="3" required></textarea>
+        </div>
+        <div class="item">
+          <p>Hvor mange kWh brukes til oppvarming på gården?</p>
+          <textarea rows="3" required></textarea>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">BEKREFT</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- JS & CSS library of MultiSelect plugin -->
+  <script src="multiselect/jquery.multiselect.js"></script>
+  <link rel="stylesheet" href="multiselect/jquery.multiselect.css">
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/test.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="dyreslag">
+    <p>Hvilket dyreslag er på gården, og hva er antallet?</p>
+    <button class="add_form_field">Legg til &nbsp;
+      <span style="font-size:16px; font-weight:bold;">+ </span>
+    </button>
+    <div><!-- (\/) (°,,,,°) (\/)
+         woop woop woop-->
+        <select class="valgDyreslag custom-select custom-select-lg mb-3">
+        <option selected>Velg dyreslag</option>
+        <option value="1">Storfe</option>
+        <option value="2">Maur</option>
+        <option value="3">Høns</option>
+      </select>
+
+      <input class="dyreslagNummer" type="number" id="antall" name="antall" min="1" required>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          var max_fields = 10;
+          var wrapper = $(".dyreslag");
+          var add_button = $(".add_form_field");
+
+          var x = 1;
+          $(add_button).click(function(e) {
+            e.preventDefault();
+            if (x < max_fields) {
+              x++;
+              $(wrapper).append(
+                '<div><select class="valgDyreslag custom-select custom-select-lg mb-3"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><input type="checkbox" class="plus-minus"><a class="dribbble" href="https://dribbble.com/shots/9834681--Toggle" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a></div>'
+                ); //add input box
+            } else {
+              alert('You Reached the limits')
+            }
+          });
+
+          $(wrapper).on("click", ".plus-minus", function(e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+            x--;
+          })
+        });
+      </script>
+      </div>
+  </div>
+</body>
+
+</html>

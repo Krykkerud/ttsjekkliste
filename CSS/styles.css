@@ -1,0 +1,218 @@
+body {
+  min-height: 100%;
+}
+
+body, div, form, input, textarea, p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+}
+
+hr {
+  border-top: 5px dotted #F1F1F1;
+  border-bottom: none;
+  width: 90%;
+  margin: 25px auto;
+}
+
+p {
+  padding: 10px 0;
+}
+h1 {
+  position: absolute;
+  margin: 0;
+  font-size: 32px;
+  color: #fff;
+  z-index: 2;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding: 20px;
+}
+
+form {
+  width: 95%;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #800080;
+}
+
+.banner {
+  position: relative;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ku-image {
+  position: relative;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.kontakt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 25px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: calc(100% - 10px);
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+input[type=tel] {
+  width: calc(100% - 10px);
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+input[type=email] {
+  width: calc(100% - 10px);
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+.strom {
+  width: calc(100% - 10px);
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+.dyreslagNummer {
+  margin-right: 3rem ;
+  width: 8%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+textarea {
+  width: calc(100% - 10px);
+  padding: 25px auto;
+  resize: vertical;
+  background-color: #F1F1F1;
+}
+
+.item:hover p, input:hover::placeholder {
+  color: #cc0052;
+}
+
+.item input:hover, .item textarea:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 6px 0 #cc0052;
+  color: #cc0052;
+}
+
+.item {
+  position: relative;
+  margin: 10px 0;
+}
+
+.btn-block {
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #cc0052;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dyreslag {
+}
+
+.valgDyreslag{
+  margin-right: 10px;
+}
+
+.add_form_field {
+  width: 70px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #cc0052;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete{
+  width: 40px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #cc0052;
+  font-size: 11px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: #ff0066;
+}
+
+@media (min-width: 568px) {
+  .name-item, .contact-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-item .item {
+    width: calc(50% - 8px);
+  }
+
+  .name-item input {
+    margin-left: 0px;
+    width: calc(50% - 20px);
+  }
+
+  .contact-item input {
+    width: calc(100% - 12px);
+  }
