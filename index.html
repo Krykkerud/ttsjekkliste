@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <title></title>
   <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- Bootstrap and jQuery: -->
+  <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,49 +20,48 @@
 
 <body>
 
-  <div class="container1">
+  <div class="container-fluid">
     <form action="/">
       <div class="banner">
         <h1>Test</h1>
         <img class="fjord-image" src="images/gaardfjord.jpeg" alt="fjord">
       </div>
       <h3> Fyll ut sjekklisten under for å få et tilbud som er tilpasset deg:</h3>
-      <div class="kontakt">
-        <div class="kontakt-person">
-          <p>Fornavn</p>
-          <input type="text" name="name" id="name" placeholder="Fornavn*" required>
-          <p>Etternavn</p>
-          <input type="text" name="name" id="name" placeholder="Etternavn*" required>
-          <p>Telefonnummer</p>
-          <input type="tel" id="phone" name="phone" placeholder="Telefonnummer*" required>
-          <p>Epost</p>
-          <input type="email" id="email " name="email" placeholder="Epost*" required />
-        </div>
-
-        <div class="kontakt-firma">
-          <p>Firmanavn</p>
-          <input type="text" name="name" id="name" placeholder="Firmanavn*" required>
-          <p>Adresse</p>
-          <input type="text" name="name" id="name" placeholder="Adresse*" required>
-          <p>Gårds/Bruksnummer</p>
-          <input type="text" id="name" name="name" placeholder="Gårds/Bruksnummer*" required>
-          <p>Organisasjonsnummer</p>
-          <input type="text" id="text " name="text" placeholder="Organisasjonsnummer" />
-        </div>
+      <div class="container-fluid kontakt">
+          <div class="kontakt-person">
+            <p>Fornavn</p>
+            <input type="text" name="name" id="name" placeholder="Fornavn*" required>
+            <p>Etternavn</p>
+            <input type="text" name="name" id="name" placeholder="Etternavn*" required>
+            <p>Telefonnummer</p>
+            <input type="tel" id="phone" name="phone" placeholder="Telefonnummer*" required>
+            <p>Epost</p>
+            <input type="email" id="email " name="email" placeholder="Epost*" required />
+          </div>
+          <div class="kontakt-firma ">
+            <p>Firmanavn</p>
+            <input type="text" name="name" id="name" placeholder="Firmanavn*" required>
+            <p>Adresse</p>
+            <input type="text" name="name" id="name" placeholder="Adresse*" required>
+            <p>Gårds/Bruksnummer</p>
+            <input type="text" id="name" name="name" placeholder="Gårds/Bruksnummer*" required>
+            <p>Organisasjonsnummer</p>
+            <input type="text" id="text " name="text" placeholder="Organisasjonsnummer" />
+          </div>
       </div>
       <hr>
-      <div class="gaard1">
+      <div class="gaard1 ">
         <div class="info1">
 
           <div class="dyreslag">
             <p>Hvilket dyreslag er på gården, og hva er antallet?</p>
-            <button class="btn-sm add_form_field">Legg til &nbsp;
+            <button class="add_form_field">Legg til &nbsp;
               <span style="list-style-type: none; font-size:16px; font-weight:bold;">+ </span>
             </button>
             <div>
               <!-- (\/) (°,,,,°) (\/)
              woop woop woop-->
-              <select class="valgDyreslag custom-select custom-select-lg mb-3">
+              <select class="valgDyreslag">
                 <option selected>Velg dyreslag</option>
                 <option value="1">Storfe</option>
                 <option value="2">Maur</option>
@@ -78,7 +81,7 @@
                     if (x < max_fields) {
                       x++;
                       $(wrapper).append(
-                        '<div><select class="valgDyreslag custom-select custom-select-lg mb-3"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><button class="btn-xs delete">Fjern</button></div>'
+                        '<div><select class="valgDyreslag"><option selected>Velg dyreslag</option><option value="1">Storfe</option><option value="2">Maur</option><option value="3">Høns</option></select><input type="number" id="antall" name="antall"min="1"><button class="delete">Fjern</button></div>'
                       ); //add input box
                     } else {
                       alert('You Reached the limits')
